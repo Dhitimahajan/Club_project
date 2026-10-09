@@ -21,7 +21,15 @@
 
 ---
 
-## 🚀 Live Demo & Structure
+## 📸 Application Screenshots
+
+### 1. Desktop Showcase (Section A & B: Product Showcase & Interactive Hotspots)
+![AURA ONE Desktop Showcase](screenshots/desktop-showcase.png)
+
+### 2. Mobile Responsive Layout (390px Breakpoint)
+<img src="screenshots/mobile-view.png" width="380" alt="AURA ONE Mobile Layout" />
+
+---
 
 ### Sections Implemented:
 1. **Section A — Main Showcase**:
