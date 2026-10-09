@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA ONE — Sound That Moves With You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation / Brand Bar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-logo">AURA</span>
+        <span class="brand-divider">/</span>
+        <span class="brand-badge">AUDIO / 001</span>
+      </div>
+      <div class="nav-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Series 01 · Global Launch</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+
+    <!-- SECTION A: Main Showcase -->
+    <section id="showcase-section" class="showcase-section">
+      <div class="showcase-grid">
+
+        <!-- Left Column: Product Details & Controls (45%) -->
+        <div class="showcase-info">
+          
+          <div class="category-pill">
+            <span class="pill-dot"></span>
+            <span class="pill-text">AURA ONE · OVER-EAR FLAGSHIP</span>
+          </div>
+
+          <h1 class="main-headline">
+            ENGINEERED FOR <span class="highlight-italic">IMMERSION.</span>
+          </h1>
+
+          <p class="subheadline">
+            Hear what you’ve been missing. Meet <strong>AURA ONE</strong>. Your world, in better sound.
+            Crafted with custom 40mm titanium drivers, adaptive acoustic cancellation, and bespoke acoustic mesh.
+          </p>
+
+          <!-- Price & Selected Color Label -->
+          <div class="pricing-color-row">
+            <div class="price-box">
+              <span class="price-label">Launch Price</span>
+              <div class="price-val">₹12,999</div>
+            </div>
+            <div class="color-indicator-box">
+              <span class="color-label-tag">Finish</span>
+              <div class="color-val" id="selectedColorLabel">01 — Midnight Black</div>
+            </div>
+          </div>
+
+          <!-- Color Swatch Component -->
+          <div class="swatch-group" role="radiogroup" aria-label="Select headphone finish">
+            <button 
+              class="swatch-btn active" 
+              data-color="black" 
+              data-name="01 — Midnight Black" 
+              data-accent="#B8F36B"
+              aria-checked="true"
+              role="radio"
+              title="Midnight Black">
+              <span class="swatch-circle black-swatch"></span>
+              <span class="swatch-tooltip">Midnight Black</span>
+            </button>
+            <button 
+              class="swatch-btn" 
+              data-color="silver" 
+              data-name="02 — Titanium Silver" 
+              data-accent="#98D9FF"
+              aria-checked="false"
+              role="radio"
+              title="Titanium Silver">
+              <span class="swatch-circle silver-swatch"></span>
+              <span class="swatch-tooltip">Titanium Silver</span>
+            </button>
+            <button 
+              class="swatch-btn" 
+              data-color="green" 
+              data-name="03 — Forest Green" 
+              data-accent="#65C286"
+              aria-checked="false"
+              role="radio"
+              title="Forest Green">
+              <span class="swatch-circle green-swatch"></span>
+              <span class="swatch-tooltip">Forest Green</span>
+            </button>
+          </div>
+
+          <!-- Action CTA & Microcopy -->
+          <div class="cta-action-area">
+            <button class="cta-primary-btn" id="exploreBtn">
+              <span>Explore AURA ONE</span>
+              <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </button>
+            <a href="#features-section" class="scroll-discover-link">
+              <span>Discover features</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Spec Pill Strip -->
+          <div class="specs-ribbon">
+            <div class="spec-item">
+              <span class="spec-num">40h</span>
+              <span class="spec-desc">Battery Life</span>
+            </div>
+            <div class="spec-divider"></div>
+            <div class="spec-item">
+              <span class="spec-num">ANC</span>
+              <span class="spec-desc">Adaptive Shield</span>
+            </div>
+            <div class="spec-divider"></div>
+            <div class="spec-item">
+              <span class="spec-num">5.4</span>
+              <span class="spec-desc">Bluetooth Multipoint</span>
+            </div>
+            <div class="spec-divider"></div>
+            <div class="spec-item">
+              <span class="spec-num">248g</span>
+              <span class="spec-desc">Ultra-lightweight</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Product Stage & Hotspots (55%) -->
+        <div class="showcase-stage">
+          <div class="product-viewport" id="productViewport">
+            
+            <!-- Soft Ambient Backlight Glow -->
+            <div class="ambient-glow" id="ambientGlow"></div>
+
+            <!-- Product Image Variants (Smart Crossfade) -->
+            <div class="image-wrapper" id="imageWrapper">
+              <img 
+                src="assets/aura-black.jpg" 
+                alt="AURA ONE Wireless Headphones in Midnight Black" 
+                class="product-render active" 
+                id="img-black" 
+                loading="eager">
+              <img 
+                src="assets/aura-silver.jpg" 
+                alt="AURA ONE Wireless Headphones in Titanium Silver" 
+                class="product-render" 
+                id="img-silver" 
+                loading="lazy">
+              <img 
+                src="assets/aura-green.jpg" 
+                alt="AURA ONE Wireless Headphones in Forest Green" 
+                class="product-render" 
+                id="img-green" 
+                loading="lazy">
+            </div>
+
+            <!-- SECTION B: Interactive Feature Hotspots -->
+            
+            <!-- Hotspot 1: Adaptive ANC (Ear cup mesh) -->
+            <div class="hotspot-container" id="hotspot-anc" style="top: 64%; left: 36%;">
+              <button class="hotspot-pin" aria-label="Feature details: Adaptive ANC" aria-expanded="false">
+                <span class="ping-ring"></span>
+                <span class="pin-core">01</span>
+              </button>
+              <div class="hotspot-card card-anc" role="region" aria-live="polite">
+                <div class="card-header">
+                  <div class="card-tag">Acoustic Shield</div>
+                  <button class="card-close-btn" aria-label="Close feature details">&times;</button>
+                </div>
+                <h3 class="card-title">Adaptive ANC</h3>
+                <p class="card-body">
+                  Dual hybrid microphones constantly sample environmental noise at 48,000 times per second, seamlessly canceling up to 38 dB of ambient distraction.
+                </p>
+                <div class="card-metric">
+                  <span class="metric-val">-38 dB</span>
+                  <span class="metric-lbl">Active attenuation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hotspot 2: Long Battery Life (Base / Port cluster) -->
+            <div class="hotspot-container" id="hotspot-battery" style="top: 76%; left: 52%;">
+              <button class="hotspot-pin" aria-label="Feature details: 40-hour Battery" aria-expanded="false">
+                <span class="ping-ring"></span>
+                <span class="pin-core">02</span>
+              </button>
+              <div class="hotspot-card card-battery" role="region" aria-live="polite">
+                <div class="card-header">
+                  <div class="card-tag">Power Management</div>
+                  <button class="card-close-btn" aria-label="Close feature details">&times;</button>
+                </div>
+                <h3 class="card-title">40-Hour Stamina</h3>
+                <p class="card-body">
+                  Up to 40 hours of uninterrupted listening on a single charge with ANC enabled. Quick-charge fuels 5 hours of playback in just 10 minutes via USB-C.
+                </p>
+                <div class="card-metric">
+                  <span class="metric-val">40h / 5h</span>
+                  <span class="metric-lbl">Full charge / 10m boost</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hotspot 3: All-Day Comfort (Headband Cushion) -->
+            <div class="hotspot-container" id="hotspot-comfort" style="top: 25%; left: 56%;">
+              <button class="hotspot-pin" aria-label="Feature details: All-Day Comfort" aria-expanded="false">
+                <span class="ping-ring"></span>
+                <span class="pin-core">03</span>
+              </button>
+              <div class="hotspot-card card-comfort" role="region" aria-live="polite">
+                <div class="card-header">
+                  <div class="card-tag">Ergonomic Fit</div>
+                  <button class="card-close-btn" aria-label="Close feature details">&times;</button>
+                </div>
+                <h3 class="card-title">All-Day Comfort</h3>
+                <p class="card-body">
+                  Zero-pressure memory foam headband, breathable perforated protein leather, and an ultra-lightweight 248g chassis designed for fatigue-free sessions.
+                </p>
+                <div class="card-metric">
+                  <span class="metric-val">248 grams</span>
+                  <span class="metric-lbl">Featherlight balance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hint badge for desktop users -->
+            <div class="hotspot-hint">
+              <span class="hint-icon">✦</span> Click hotspots to reveal engineering specs
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION C: Scroll Experience Section -->
+    <section id="features-section" class="scroll-experience-section">
+      
+      <div class="scroll-header">
+        <div class="category-pill scroll-pill">
+          <span class="pill-dot"></span>
+          <span class="pill-text">DEEP DIVE · ARCHITECTURE</span>
+        </div>
+        <h2 class="scroll-headline">
+          PRECISION MEETS <span class="highlight-underline">PASSION.</span>
+        </h2>
+        <p class="scroll-subheadline">
+          Every contour, acoustic chamber, and magnetic driver in AURA ONE was engineered to disappear, leaving only pure, unadulterated sound.
+        </p>
+      </div>
+
+      <!-- Interactive Scroll Feature Cards -->
+      <div class="feature-cards-grid">
+        
+        <!-- Card 1 -->
+        <article class="feature-card" data-index="1">
+          <div class="feature-card-header">
+            <span class="feature-card-num">01</span>
+            <div class="feature-badge">ACOUSTICS</div>
+          </div>
+          <h3 class="feature-card-title">40mm Custom Titanium Drivers</h3>
+          <p class="feature-card-text">
+            Ultralight rigid diaphragm delivers surgical transient response, deep distortion-free sub-bass, and crystal highs up to 40,000 Hz.
+          </p>
+          <div class="feature-footer">
+            <span class="accent-text">Hi-Res Audio Certified</span>
+            <span class="icon-circle">↗</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="feature-card" data-index="2">
+          <div class="feature-card-header">
+            <span class="feature-card-num">02</span>
+            <div class="feature-badge">PROCESSING</div>
+          </div>
+          <h3 class="feature-card-title">Spatial Audio with Head Tracking</h3>
+          <p class="feature-card-text">
+            Integrated 6-axis gyroscopic sensors anchor the soundstage in physical space, crafting a cinema-grade three-dimensional auditory sphere.
+          </p>
+          <div class="feature-footer">
+            <span class="accent-text">Dynamic Spatial EQ</span>
+            <span class="icon-circle">↗</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="feature-card" data-index="3">
+          <div class="feature-card-header">
+            <span class="feature-card-num">03</span>
+            <div class="feature-badge">CONNECTIVITY</div>
+          </div>
+          <h3 class="feature-card-title">Bluetooth 5.4 Multipoint</h3>
+          <p class="feature-card-text">
+            Switch frictionlessly between your laptop, tablet, and smartphone. Supports lossless codecs with ultra-low 35ms latency gaming mode.
+          </p>
+          <div class="feature-footer">
+            <span class="accent-text">Multipoint Auto-Pair</span>
+            <span class="icon-circle">↗</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom Conversion Banner -->
+      <div class="preorder-strip">
+        <div class="strip-content">
+          <div>
+            <h4 class="strip-title">Ready to experience AURA ONE?</h4>
+            <p class="strip-desc">Special inaugural pricing ends soon. Includes 2-year international warranty.</p>
+          </div>
+          <div class="strip-actions">
+            <div class="strip-price">₹12,999</div>
+            <button class="cta-primary-btn strip-btn">
+              <span>Order Now</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="brand-logo footer-logo">AURA</span>
+        <span class="footer-copy">© 2026 AURA Acoustics Ltd. Designed for Framer Product Showcase.</span>
+      </div>
+      <div class="footer-tags">
+        <span class="framer-tag">Framer Components</span>
+        <span class="framer-tag">Variants</span>
+        <span class="framer-tag">Variables</span>
+        <span class="framer-tag">Scroll Transform</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
